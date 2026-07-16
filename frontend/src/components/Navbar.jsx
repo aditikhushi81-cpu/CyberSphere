@@ -1,30 +1,42 @@
 function Navbar() {
   return (
-    <nav className="flex justify-between items-center px-10 py-6">
+    <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-slate-950/80 border-b border-slate-800">
 
-      <h1 className="text-3xl font-bold text-cyan-400">
-        CyberSphere
-      </h1>
+      <div className="max-w-7xl mx-auto flex justify-between items-center px-10 py-5">
 
-      <ul className="flex gap-8 text-gray-300">
+        <h1 className="text-3xl font-bold text-cyan-400">
+          CyberSphere
+        </h1>
 
-        <li className="hover:text-cyan-400 cursor-pointer">
-          Home
-        </li>
+        <ul className="flex gap-8 text-gray-300">
 
-        <li className="hover:text-cyan-400 cursor-pointer">
-          Features
-        </li>
+          <li>
+            <a href="#home" className="hover:text-cyan-400 transition">
+              Home
+            </a>
+          </li>
 
-        <li className="hover:text-cyan-400 cursor-pointer">
-          About
-        </li>
+          <li>
+            <a href="#features" className="hover:text-cyan-400 transition">
+              Features
+            </a>
+          </li>
 
-        <li className="hover:text-cyan-400 cursor-pointer">
-          Contact
-        </li>
+          <li>
+            <a href="#home" className="hover:text-cyan-400 transition">
+              About
+            </a>
+          </li>
 
-      </ul>
+          <li>
+            <a href="#contact" className="hover:text-cyan-400 transition">
+              Contact
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
 
     </nav>
   );

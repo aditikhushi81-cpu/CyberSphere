@@ -1,14 +1,34 @@
+import { motion } from "framer-motion";
 import FeatureCard from "./FeatureCard";
 
 function Features() {
   return (
-    <section className="px-10 py-24">
+    <section id="features" className="px-10 py-24">
 
-      <h2 className="text-5xl font-bold text-center mb-16">
+      <motion.h2
+        className="text-5xl font-bold text-center mb-16"
+        initial={{ opacity: 0, y: -40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+        viewport={{ once: true }}
+      >
         Why Choose CyberSphere
-      </h2>
+      </motion.h2>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <motion.div
+        className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
+        variants={{
+          hidden: {},
+          visible: {
+            transition: {
+              staggerChildren: 0.2,
+            },
+          },
+        }}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
 
         <FeatureCard
           icon="🛡️"
@@ -34,7 +54,7 @@ function Features() {
           description="Investigate cyber incidents using professional forensic tools."
         />
 
-      </div>
+      </motion.div>
 
     </section>
   );
