@@ -4,6 +4,7 @@ import Features from "../components/Features";
 import Stats from "../components/Stats";
 import Testimonials from "../components/Testimonials";
 import Footer from "../components/Footer";
+import Contact from "../components/Contact";
 
 function Home() {
   return (
@@ -13,6 +14,7 @@ function Home() {
       <Features />
       <Stats />
       <Testimonials />
+      <Contact />
       <Footer />
     </div>
   );
